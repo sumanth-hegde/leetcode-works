@@ -29,17 +29,19 @@ Constraints:
 -109 <= target <= 109
 Only one valid answer exists.
 """
+from operator import index
+from typing import List
 
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        list_indices = {}
-        for i in range(len(nums)):
-            val = target - nums[i]
-            if val in list_indices:
-                return [list_indices[val], i]
-            list_indices[nums[i]] = i
+nums = [3,2,3]
+target = 6
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_indices = {}
+        for i, num in enumerate(nums):
+            val = target - num
+            if val in num_indices:
+                return [num_indices[val], i]
+            num_indices[num] = i
+
+sol = Solution()
+print(sol.twoSum(nums, target))
