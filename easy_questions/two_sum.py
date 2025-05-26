@@ -32,7 +32,7 @@ Only one valid answer exists.
 from operator import index
 from typing import List
 
-nums = [3,2,3]
+nums = [3,2,4]
 target = 6
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
