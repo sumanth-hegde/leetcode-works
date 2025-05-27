@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def findDuplicates(self, nums: List[int]) -> List[int]:
         result = []
@@ -8,3 +11,7 @@ class Solution:
             else:
                 nums[index] = -nums[index]
         return result
+
+
+sol = Solution()
+print(sol.findDuplicates([4,3,2,7,8,2,3,1]))
